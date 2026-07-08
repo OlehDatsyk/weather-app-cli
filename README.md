@@ -4,7 +4,7 @@ A clean, well-structured command-line weather application built with Python 3.12
 It fetches live weather data from the [OpenWeatherMap](https://openweathermap.org/api)
 API and displays it in a nicely formatted terminal report using [Rich](https://github.com/Textualize/rich).
 
-![Tech](https://img.shields.io/badge/Python-3.9+-blue) ![Tech](https://img.shields.io/badge/Flask-3.0-black) ![Tech](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Tech](https://img.shields.io/badge/Python-3.9+-blue)
 
 ---
 
