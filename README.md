@@ -13,12 +13,12 @@ API and displays it in a nicely formatted terminal report using [Rich](https://g
 ```
 weather-app-cli/
 │
-├── main.py              # CLI entry point / user interaction loop
-├── weather_service.py   # API client + WeatherReport data model
-├── config.py            # Environment-based configuration (Settings)
-├── utils.py             # Validation & formatting helpers
-├── requirements.txt     # Python dependencies
-├── .env.example          # Template for required environment variables
+├── main.py # CLI entry point / user interaction loop
+├── weather_service.py # API client + WeatherReport data model
+├── config.py # Environment-based configuration (Settings)
+├── utils.py # Validation & formatting helpers
+├── requirements.txt # Python dependencies
+├── .env.example # Template for required environment variables
 ├── .gitignore
 └── README.md
 ```
@@ -81,7 +81,7 @@ This installs:
 
 1. Go to [https://openweathermap.org/api](https://openweathermap.org/api)
 2. Click **Sign Up** and create a free account (or **Sign In** if you have one)
-3. Once logged in, go to your account menu → **My API Keys**
+3. Once logged in, go to your account menu -> **My API Keys**
 4. Copy the default key (or generate a new one)
 5. Paste it into your `.env` file as `OPENWEATHER_API_KEY`
 
@@ -102,9 +102,9 @@ again or exit.
 
 ### Opening in Visual Studio Code
 
-1. Open the `weather-app-cli` folder in VS Code (`File → Open Folder`)
+1. Open the `weather-app-cli` folder in VS Code (`File -> Open Folder`)
 2. Select the virtual environment's Python interpreter
-   (`Ctrl+Shift+P` → **Python: Select Interpreter** → choose `venv`)
+   (`Ctrl+Shift+P` -> **Python: Select Interpreter** -> choose `venv`)
 3. Open a terminal in VS Code (`` Ctrl+` ``) and run `python main.py`
 
 ## 5. Example Terminal Output
@@ -116,7 +116,7 @@ again or exit.
 ╰────────────────────────────────────────╯
 Enter a city name: London
 
-╭─── Weather Report — London, GB ─────────────────╮
+╭─── Weather Report - London, GB ─────────────────╮
 │ City                  London                    │
 │ Country               GB                        │
 │ Temperature           15.2°C                    │
@@ -234,13 +234,13 @@ python main.py
 That's macOS/Linux syntax. On Windows PowerShell use `venv\Scripts\Activate.ps1` instead.
 
 **`No module named 'rich'` or similar import errors**
-Confirm `(venv)` is shown in your prompt, then run `pip install -r requirements.txt` again — this error usually means `pip install` ran against a different Python than the one running `main.py`.
+Confirm `(venv)` is shown in your prompt, then run `pip install -r requirements.txt` again - this error usually means `pip install` ran against a different Python than the one running `main.py`.
 
 **Invalid auth error / 401 on lookup**
 Your `.env` still has the placeholder text, has a duplicate `OPENWEATHER_API_KEY` line, or the key hasn't finished activating yet (can take up to a couple of hours after creating it). Double-check the key, save `.env`, and rerun `python main.py`.
 
 **"City not found" (404)**
-Check spelling. This is expected, friendly behavior, not a bug — the loop continues and re-prompts you.
+Check spelling. This is expected, friendly behavior, not a bug - the loop continues and re-prompts you.
 
 **Rate limit exceeded (429)**
 You've hit OpenWeatherMap's free-tier request limit. Wait a short while before searching again.
